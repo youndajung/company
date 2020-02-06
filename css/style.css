@@ -21,28 +21,60 @@ header .header_top{
    top: 40px; 
    left: 50%; 
    margin-left: -630px;
-   z-index: 2;
+   z-index: 4;
 }
 header .header_top>h1{
    float: left;
    height: 50px;
 }
-header .header_top .gnb{float: right;}
+header .header_top .gnb{
+   float: right;
+   width: 700px;
+   position: relative;
+}
 header .header_top .gnb>ul>{}
 header .header_top .gnb>ul>li{
    float: left;
+   width: 130px; height: 50px;
+   text-align: center;
 }
+header .header_top .gnb>ul>li:last-child{width: 50px;}
+header .header_top .gnb>ul>li:hover>a{
+   font-weight: bold;
+   color:#ffc123;
+}
+header .header_top .gnb>ul>li:hover .sub_menu{display: block;}
+
 header .header_top .gnb>ul>li>a{
    display: block;
    line-height: 50px;
-   margin-left: 50px;
+   transition:.3s;
 }
 header .header_top .gnb>ul>li>a>img{
    display: block;
    padding-top: 15px;
+   padding-left: 20px;
 }
 /*서브메뉴*/
-/*.gnb li .submenu{width: 100px; height: 500px; poa}*/
+.gnb li .sub_menu{
+   width: 130px; height: 240px; 
+   position: absolute; left: 0;
+   background-color: rgba(0,0,0,.5);
+   line-height: 35px;
+   padding: 10px 0;
+   display: none;
+   transition:;
+}
+.gnb li .sub_menu li{
+   width: 100%;
+}
+.gnb li .sub_menu li>a{
+   display: block; color:#fff;
+   transition:.3s;
+}
+.gnb li .sub_menu li>a:hover{
+   font-weight:bold; color:#ffc123;
+}
 
 header .first{
    position: absolute;

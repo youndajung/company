@@ -89,13 +89,19 @@ header#sub_header h2{
 	display: inline-block;
 	padding-right: 20px;
 }
+.dapsWrap .daps>ul>li>a .homebox{display: inline-block;}
+.dapsWrap .daps>ul>li>a .homebox img{float: left;}
+.dapsWrap .daps>ul>li>a .homehb{display: none;}
+
+.dapsWrap .daps>ul>li>a .arrowbox{display: inline-block;}
+.dapsWrap .daps>ul>li>a .arrowbox img{float: left;}
+.dapsWrap .daps>ul>li>a .arrowhb{display: none;}
 
 .submenu01{
 	width: 100%; height: 270px; 
 	background-color: rgba(255,194,35,.8);
 	padding: 10px 0;
 	display: none;
-   transition:.3s;
 }
 .submenu01 li{
 	height: 50px;
@@ -108,7 +114,12 @@ header#sub_header h2{
 }
 .submenu01 li a:hover{font-weight: bold; color:#fff;}
 
+.dapsWrap .daps>ul>li.daps00:hover .home{display: none;}
+.dapsWrap .daps>ul>li.daps00:hover .homehb{display: block;}
+
 .dapsWrap .daps>ul>li.daps01:hover .submenu01{display: block;}
+.dapsWrap .daps>ul>li.daps01:hover .arrow{display: none;}
+.dapsWrap .daps>ul>li.daps01:hover .arrowhb{display: block;}
 
 .submenu02{
 	width: 100%; height: 220px; 
@@ -128,6 +139,8 @@ header#sub_header h2{
 }
 .submenu02 li a:hover{font-weight: bold;}
 .dapsWrap .daps>ul>li.daps02:hover .submenu02{display: block;}
+.dapsWrap .daps>ul>li.daps02:hover .arrow{display: none;}
+.dapsWrap .daps>ul>li.daps02:hover .arrowhb{display: block;}
 
 /*daps3Wrap*/
 .daps3Wrap{

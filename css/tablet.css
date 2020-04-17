@@ -14,15 +14,11 @@ header .headerbg{
 }
 
 header .header_top{
-   _width: 1260px;
    height: 50px;
-   /*position: absolute; 
-   top: 40px; 
-   left: 50%; 
-   margin-left: -630px;*/
    z-index: 4;
 }
 header .header_top>h1{
+   padding-top: 15px;
    float: left;
    height: 50px;
 }
@@ -36,8 +32,8 @@ header .header_top .gnb{
 }
 header .header_top .gnb>ul{
    position: absolute; 
-   left: 50%; top: 50%; 
-   transform:translate(-50%,-50%);
+   left: 50%; top: 200px; 
+   transform:translate(-50%);
 }
 header .header_top .gnb>ul>li{
    height: 50px; 
@@ -62,10 +58,11 @@ header .header_top .gnb>ul>li>a{
 /*toggle*/
 
 .toggleMenu{
-      width: 50px; height: 50px;
-      position: relative;
-      cursor:pointer;
-      float: right;
+   margin-top: 15px;
+   width: 50px; height: 50px;
+   position: relative;
+   cursor:pointer;
+   float: right;
 }
 .toggleMenu div{
    width: 35px;height: 5px; 
@@ -85,37 +82,48 @@ header .header_top .gnb>ul>li>a{
 .toggleMenu.change .bar3{transform:rotate(45deg); top: 21px; background-color: #fff;}
 .toggleMenu.change{position: fixed; z-index: 999999; right: 0;}
 
-.first{
+/*.first{
    position: absolute;
    left: 50%; top: 30px;
-   /*transform:translate(-50%,0);*/
    margin-left:-440px;
    z-index: 3;
    transition:.3s;
-}
-.first>img{transform:scale(0.4,0.4);}
-.jungle{
+}*/
+header .first{
    position: absolute;
-   left: 50%;
-   transform:translateX(-50%) scale(.5,.5);
+   left: 10%; top: 160px;
+   z-index: 3;
+   transition:.3s;
+   width: 80%;
+}
+
+
+.first>img{display: block; width: 100%;}
+.jungle{
+   width: 100%;
+   overflow: hidden;
+
+
+   position: absolute;
    margin-left:0;
-   top: 40px;
+   top: 300px;
    z-index: 1;
    animation-name:jungle;
    animation-duration:2s;
    animation-direction:alternate;
    animation-iteration-count:infinite;
 }
+.jungle img{display: block; width: 100%;}
 @keyframes jungle{
-   to{top: 70px;}
+   to{top: 350px;}
 }
 /*컨테이너*/
 .container_wrap{
-  width: 100%; height: 2-00px;
+  width: 100%; height: 200px;
   background-color: #03511f;
 }
 .container_wrap .container01{
-  width: 100%; height: 100%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -123,8 +131,8 @@ header .header_top .gnb>ul>li>a{
 
 .container_wrap .container01>ul{}
 .container_wrap .container01>ul li{width: 100%;}
-.container_wrap .container01>ul li a{display: block;}
-.container_wrap .container01>ul li a>img{width: 100%;}
+.container_wrap .container01>ul li a{display: block; width: 100%;}
+.container_wrap .container01>ul li a>img{display: block; width: 100%;}
 
 /*덤블*/
 .container_wrap .dumble{display: none;}
@@ -136,27 +144,35 @@ header .header_top .gnb>ul>li>a{
 .container_wrap .quickWrap{display: none;}
 /*컨테이너시작*/
 .box_wrap{
-   height: 970px;
+   height: 1020px;
    background:url(../images/boxbg.png) repeat center;
    background-size: cover;
+   padding-top: 50px;
 }
-.box_wrap>h3{
-   width: 300px;
-   font-size: 30px;
+.boxTitle{
+   background-color: red;
+   margin-top: 30px;
+   background-color: rgba(0,0,0,.3); 
+   border-radius: 20px;
+   width: 450px; height: 180px; 
    margin: 0 auto;
-   color:#222;
+   text-align: center;
+}
+.boxTitle>h3{
+   
+   font-size: 40px;
+   
+   color:#ebebeb;
    font-weight: bold;
-   text-align: center;
 }
-.box_wrap h3>span{
+.boxTitle span{
    display: block;
-   padding-top: 10px;
-   width: 300px;
-   font-size: 100px;
+   font-size: 80px;
    margin: 0 auto;
-   color:#dcdcdc;
+   color:#ebebeb;
    font-weight:bold;
-   text-align: center;
+   letter-spacing: 10px;
+   padding-left: 20px;
 }
 .box_wrap .box{
    width: 100%; 
@@ -240,10 +256,11 @@ footer#footer{
 }
 .tree{display: none;}
 footer .call{
-   width: 100%;
-   padding-top: 60px;
    color:#3f3f3f;
-   padding-left: 70px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .fs28{font-size: 25px; font-weight: bold;}
 .fs50{font-size: 40px; font-weight: bold;}

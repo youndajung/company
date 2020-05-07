@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-body{_overflow: hidden;}
 header#header{
    position: relative;
    width: 100%;
